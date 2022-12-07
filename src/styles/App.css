@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.App {
+    width: 80%;
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+}
+
+.post__btns {
+    display: flex;
+}
+
+.post-enter {
+    transform: translateX(-150px);
+    opacity: 0;
+}
+.post-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 200ms ease-in;
+}
+.post-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+.post-exit-active {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+
+.page__current {
+    font-weight: bold;
+}
